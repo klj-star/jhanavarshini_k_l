@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jhanavarshini K L | AI/ML Consultant & Business Strategist | Data-Driven Solutions | Chennai, India" />
+    <meta name="keywords" content="AI Consultant, Machine Learning, Business Analytics, Data Science, Chennai" />
+    <meta name="author" content="Jhanavarshini K L" />
+
+    <title>Jhanavarshini K L | AI & Business Strategy Consultant</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #3b82f6;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+            color: white;
+            padding: 8rem 0 5rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-info span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .btn-linkedin:hover {
+            background: #005582;
+        }
+
+        /* Main Content */
+        section {
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.875rem;
+        }
+
+        /* Services */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-header h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .skill-tag {
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        /* Tools */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .tool-item:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .tool-icon {
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        /* LinkedIn Proof */
+        .linkedin-proof {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #0077b5;
+        }
+
+        .linkedin-proof h4 {
+            color: #0077b5;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background: var(--white);
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .close-btn:hover {
+            color: var(--text);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .section-card {
+                padding: 2rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Jhanavarshini K L</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <div class="container">
+            <div class="profile-img">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h1>Jhanavarshini K L</h1>
+            <p class="tagline">AI Strategy & Business Analytics Consultant</p>
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +91 7358419437</span>
+                <span><i class="fas fa-envelope"></i> jhanavarshini.kl09@gmail.com</span>
+                <span><i class="fas fa-map-marker-alt"></i> Chennai, India</span>
+            </div>
+            <div>
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+                <a href="https://www.linkedin.com/in/jhanavarshini-k-l-/" class="btn btn-linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-card">
+                <h2>About Me</h2>
+                <p>Data-Driven Business Analyst specializing in AI/ML deployment and operational optimization. I help organizations reduce costs and improve efficiency through strategic implementation of artificial intelligence and advanced analytics.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">13%</div>
+                        <div class="stat-label">Cost Reduction</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">ML Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">Risk Reduction</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3%</div>
+                        <div class="stat-label">Profit Boost</div>
+                    </div>
+                </div>
+
+                <h3>Core Expertise</h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <div class="tool-icon"><i class="fas fa-chart-line"></i></div>
+                        <span>Predictive Analytics</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><i class="fas fa-robot"></i></div>
+                        <span>Machine Learning</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><i class="fas fa-shield-alt"></i></div>
+                        <span>AI Risk Management</span>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon"><i class="fas fa-database"></i></div>
+                        <span>Business Intelligence</span>
+                    </div>
+                </div>
+
+                <div class="linkedin-proof">
+                    <h4><i class="fab fa-linkedin"></i> Professional Verification</h4>
+                    <p>All project outcomes and certifications are documented on my LinkedIn profile for transparency.</p>
+                    <a href="https://www.linkedin.com/in/jhanavarshini-k-l-/" class="btn btn-linkedin" target="_blank">
+                        View Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-card">
+                <h2>Services</h2>
+                <p>I help organizations implement AI solutions that deliver measurable business value. <a href="#" onclick="showModal()" style="color: var(--secondary);">Terms & Conditions</a></p>
+                
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3><i class="fas fa-robot"></i> AI Strategy</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>End-to-end AI implementation from strategy to deployment.</p>
+                            <div class="skills">
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Predictive Analytics</span>
+                                <span class="skill-tag">Model Deployment</span>
+                            </div>
+                            <ul class="service-features">
+                                <li>85% accuracy in demand forecasting</li>
+                                <li>30% reduction in litigation risk</li>
+                                <li>Explainable AI frameworks</li>
+                            </ul>
+                            <p><strong>Free consultation available</strong></p>
+                            <a href="mailto:jhanavarshini.kl09@gmail.com?subject=AI Strategy Inquiry" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3><i class="fas fa-chart-line"></i> Process Optimization</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Data-driven insights to optimize business operations.</p>
+                            <div class="skills">
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">Analytics</span>
+                                <span class="skill-tag">Process Design</span>
+                            </div>
+                            <ul class="service-features">
+                                <li>13% operational cost reduction</li>
+                                <li>3% profit margin improvement</li>
+                                <li>Real-time dashboards</li>
+                            </ul>
+                            <p><strong>Free audit available</strong></p>
+                            <a href="mailto:jhanavarshini.kl09@gmail.com?subject=Process Optimization Inquiry" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3><i class="fas fa-shield-alt"></i> AI Compliance</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Ensure AI systems are ethical and legally compliant.</p>
+                            <div class="skills">
+                                <span class="skill-tag">Explainable AI</span>
+                                <span class="skill-tag">Risk Assessment</span>
+                                <span class="skill-tag">Compliance</span>
+                            </div>
+                            <ul class="service-features">
+                                <li>30% legal cost reduction</li>
+                                <li>EU AI Act compliance</li>
+                                <li>Risk scoring systems</li>
+                            </ul>
+                            <p><strong>Free assessment available</strong></p>
+                            <a href="mailto:jhanavarshini.kl09@gmail.com?subject=AI Compliance Inquiry" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section>
+        <div class="container">
+            <div class="section-card">
+                <h2>Key Projects</h2>
+                
+                <h3>Industrial Automation AI (2024-2025)</h3>
+                <p>Developed ML-powered decision system achieving 85% forecasting accuracy and 13% cost reduction.</p>
+                <div class="skills">
+                    <span class="skill-tag">Google Cloud AI</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">Tableau</span>
+                </div>
+
+                <h3>AI Skin Disease Detection (2023)</h3>
+                <p>CNN-based diagnostic tool with 77% accuracy for skin disease classification.</p>
+                <div class="skills">
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Flask API</span>
+                </div>
+
+                <h3>5G Antenna Design (2022-2023)</h3>
+                <p>Optimized antenna design reducing material costs by 18% and production time by 30%.</p>
+                <div class="skills">
+                    <span class="skill-tag">Engineering</span>
+                    <span class="skill-tag">Optimization</span>
+                    <span class="skill-tag">Agile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-card">
+                <h2>Contact</h2>
+                <p>Ready to transform your business with AI? Let's discuss your project.</p>
+                
+                <div class="contact-form">
+                    <form action="mailto:jhanavarshini.kl09@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select Service</option>
+                                <option value="ai-strategy">AI Strategy</option>
+                                <option value="process-optimization">Process Optimization</option>
+                                <option value="ai-compliance">AI Compliance</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Describe your project or requirements..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <p><strong>Contact:</strong></p>
+                    <p>Email: jhanavarshini.kl09@gmail.com</p>
+                    
+                    <p>Location: Chennai, Tamil Nadu, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jhanavarshini K L. All Rights Reserved.</p>
+            <p>AI Strategy & Business Analytics Consultant</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jhanavarshini-k-l-/" target="_blank">LinkedIn</a> |
+                <a href="mailto:jhanavarshini.kl09@gmail.com">Email</a> |
+                <a href="tel:+917358419437">Phone</a>
+            </p>
+        </div>
+    </footer>
+
+  <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Terms & Conditions</h3>
+            <p><strong>Effective Date:</strong> September 2025</p>
+            <p><strong>Governing Law:</strong> The Republic of India. Jurisdiction: Chennai, Tamil Nadu.</p>
+
+        <h4>1. Professional Positioning</h4>
+        <p>I, <strong>Jhanavarshini K L</strong>, an Indian citizen and practicing AI researcher & systems engineer, offer services grounded in technical innovation, academic inquiry, and industrial application. My work is guided by the principles of scientific integrity, national development, and ethical engineering under the sovereign framework of the Republic of India.</p>
+
+        <h4>2. Engagement & Payment Terms</h4>
+        <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+            <li>Services are project-based with deliverables defined per agreement.</li>
+            <li>Payment: 50% advance, 50% on delivery (via bank transfer or UPI).</li>
+            <li>Default in payment beyond 15 days may invoke <strong>Section 73 of The Indian Contract Act, 1872</strong> (compensation for breach of obligation).</li>
+        </ul>
+
+        <h4>3. Intellectual Property Rights</h4>
+        <p>Final deliverables (reports, models, dashboards) transfer to the client upon full payment under <strong>Section 14(a) of The Copyright Act, 1957</strong>. However, I retain ownership of:
+          <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+            <li>Proprietary algorithms, frameworks, and model architectures,</li>
+            <li>Research logs, training pipelines, and reusable codebases.</li>
+          </ul>
+        </p>
+        <p>This is consistent with the rights of creators and inventors under <strong>Section 2(o) of The Copyright Act, 1957</strong> and <strong>Section 3(k) of The Patents Act, 1970</strong>, affirming protection for non-patentable computational methods developed through independent research.</p>
+
+        <h4>4. Learning Persistence & Data Usage</h4>
+        <p>To advance AI research and engineering excellence, anonymized learnings and pattern insights (non-sensitive, non-identifiable) may be retained for continuous improvement, publication, or further innovation.</p>
+        <p>This practice aligns with:
+          <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+            <li><strong>Article 51A(h) of the Constitution of India</strong> – Duty of every citizen to develop scientific temper and spirit of inquiry</li>
+            <li><strong>Section 43A of The Information Technology Act, 2000</strong> – Protection of sensitive personal data</li>
+            <li><strong>Rule 5 of The IT (Reasonable Security Practices) Rules, 2011</strong> – Exemption for anonymized data usage</li>
+          </ul>
+        </p>
+
+        <h4>5. Confidentiality & Ethics</h4>
+        <p>All client data and business processes are treated as confidential under <strong>Section 27 of The Indian Contract Act, 1872</strong>. AI systems are designed for transparency, fairness, and compliance with emerging standards including India’s proposed <strong>Digital India Act</strong> and the <strong>EU AI Act</strong> (for global clients).</p>
+
+        <p><em>For a detailed service agreement, contact:</em> <a href="mailto:jhanavarshini.kl09@gmail.com" target="_blank" rel="noopener noreferrer">jhanavarshini.kl09@gmail.com</a></p>
+    </div>
+</div>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Modal functions
+        function showModal() {
+            document.getElementById('termsModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('termsModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('termsModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = 'var(--shadow)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
